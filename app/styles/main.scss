@@ -170,6 +170,19 @@ html, body {
     .text {
       margin: 1vw 3vw;
     }
+  }
+  .our {
+    height: 15vw;
+    display: flex;
+    .title {
+      flex: 1;
+      font-size: 45px;
+      color: #171E23;
+      padding-left: 280px;
+    }
+    .content {
+      flex: 2;
 
+    }
   }
 }
