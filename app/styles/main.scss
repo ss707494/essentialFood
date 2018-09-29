@@ -34,6 +34,9 @@ $col-black: #161D22;
   overflow: hidden;
   cursor: pointer;
 }
+@mixin boxShadow() {
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+}
 
 html, body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
@@ -42,12 +45,22 @@ html, body {
 }
 
 .mdl-demo {
+  .mdl-layout {
+    background-image: url("../images/headtoppc.png");
+    background-position: 0 0px;
+    background-size: 100vw 32vw;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.42);
+  }
   .header-nav {
-    background: #1E1E1E;
-    padding: 12px 0;
-    border-bottom: 0;
+    height: 5vw;
+    border-bottom: 1px solid rgba(151,151,151,0.5);
+    box-sizing: border-box;
+    align-items: center;
     .mdl-tabs__tab {
       color: #fff;
+      height: 3.5vw;
+      line-height: 3.5vw;
     }
     .mdl-tabs__tab.is-active {
       color: #fff;
@@ -57,39 +70,58 @@ html, body {
     }
     .header-icon {
       flex: 4;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      img {
+        height: 32px;
+        margin-left: 140px;
+      }
     }
     .space {
       flex: 1;
     }
   }
   .topbox {
-    background: #090909;
     color: #fff;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 27vw;
+    justify-content: space-between;
     >div {
       text-align: center;
     }
     h1 {
-      margin-top: 50px;
+      //margin-top: 6vw;
+      flex: 5;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    h5 {
+      flex: 2;
     }
     h1,h5 {
       text-align: center;
     }
     .btnBox {
-      margin: 40px 0 100px;
+      flex: 3;
+      //margin: 2vw 0 2vw;
+      button {
+        width: 100px;
+        height: 36px;
+        color: #fbfbff;
+      }
     }
     .startBtn {
-      width: 130px;
       background: $col-green;
-      color: #fbfbff;
       margin-right: 40px;
     }
     .aboutBtn {
-      width: 130px;
       background: $col-green;
-      color: #fbfbff;
     }
     .iconlist {
+      flex: 1;
       a {
         color: #fbfbff;
       }
@@ -97,11 +129,14 @@ html, body {
   }
   .cards {
     display: flex;
-    height: 200px;
+    height: 20vw;
     >div {
       color: #fbfbff;
       flex: 1;
       @include rippleContent();
+      &:hover {
+        @include boxShadow();
+      }
     }
     .backBlue {
       background: $col-blue;
@@ -111,6 +146,21 @@ html, body {
     }
     .backGreen {
       background: $col-green;
+    }
+    .img {
+      margin-top: 3vw;
+      text-align: center;
+      img {
+        height: 44px;
+      }
+    }
+    .title {
+      margin-top: 1.6vw;
+      font-size: 20px;
+      text-align: center;
+    }
+    .text {
+      margin: 1vw 3vw;
     }
 
   }
