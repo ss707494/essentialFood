@@ -46,72 +46,94 @@
   material.blue-orange.min.css
   material.purple-indigo.min.css
   -->
-  <link rel="stylesheet" href="./lib/mdl/material.min.css">
+  <!--<link rel="stylesheet" href="./lib/mdl/material.min.css">-->
+  <link rel="stylesheet" href="./lib/materialize/css/materialize.min.css">
 
   <!-- Your styles -->
   <link rel="stylesheet" href="styles/main.css">
 </head>
-<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+<body class="mdl-demo">
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-    <div class="mdl-tabs__tab-bar header-nav">
-      <div class="header-icon">
-        <img src="./images/e-hat-logo@2x.png" alt="">
-      </div>
-      <a class="mdl-tabs__tab is-active" href="#starks-panel">特点</a>
-      <a class="mdl-tabs__tab" href="#lannisters-panel">关于</a>
-      <a class="mdl-tabs__tab" href="#targaryens-panel">产品</a>
-      <a class="mdl-tabs__tab" href="">服务</a>
-      <a class="mdl-tabs__tab" href="">客户</a>
-      <a class="mdl-tabs__tab" href="">新闻</a>
-      <a class="mdl-tabs__tab" href="">联系我们</a>
-      <span class="space"></span>
+  <div class="header-nav ">
+    <div class="header-icon">
+      <img src="./images/e-hat-logo@2x.png" alt="">
     </div>
-    <div class="mdl-tabs__panel is-active" id="starks-panel">
-      <div class="topbox">
-        <h1>你的精华，你的事业</h1>
-        <h5>开启人生新选择</h5>
-        <div class="btnBox">
-          <button class="startBtn mdl-button mdl-js-button mdl-js-ripple-effect">
-            开始
-          </button>
-          <button class="aboutBtn mdl-button mdl-js-button mdl-js-ripple-effect">
-            联系我们
-          </button>
-        </div>
-        <div class="iconlist">
-          <a href="#">
+    <div class="headNav">
+        <ul class="tabs">
+          <li class="tab"><a class="active waves-effect waves-light" href="#test1">特点</a></li>
+          <li class="tab"><a class="active waves-effect waves-light" href="#test2">关于</a></li>
+          <li class="tab"><a class="active waves-effect waves-light" href="#test3">产品</a></li>
+          <li class="tab"><a class="active waves-effect waves-light" href="#test3">服务</a></li>
+          <li class="tab"><a class="active waves-effect waves-light" href="#test3">客户</a></li>
+          <li class="tab"><a class="active waves-effect waves-light" href="#test3">新闻</a></li>
+          <li class="tab"><a class="active waves-effect waves-light" href="#test4">联系我们</a></li>
+        </ul>
+    </div>
+    <span class="space"></span>
+  </div>
+  <div class="active" id="test1">
+    <div class="topbox">
+      <h1>你的精华，你的事业</h1>
+      <h5>开启人生新选择</h5>
+      <div class="btnBox">
+        <button class="startBtn waves-effect btn">
+          开始
+        </button>
+        <button class="aboutBtn waves-effect btn">
+          联系我们
+        </button>
+      </div>
+      <div class="iconlist">
+        <a href="#">
           <i class="material-icons md-48"> keyboard_arrow_down </i>
-          </a>
-        </div>
-      </div>
-      <div class="cards">
-        <div class="backBlue mdl-js-ripple-effect">
-          <span class="mdl-ripple"></span>
-          <div class="img">
-            <img src="./images/client_logo.png" alt="">
-          </div>
-          <div class="title">我们的愿景</div>
-          <div class="text">精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。</div>
-        </div>
-        <div class="backBlack">asd</div>
-        <div class="backGreen">asd</div>
+        </a>
       </div>
     </div>
-    <div class="mdl-tabs__panel" id="lannisters-panel">
-      <ul>
-        <li>Tywin</li>
-        <li>Cersei</li>
-        <li>Jamie</li>
-        <li>Tyrion</li>
-      </ul>
+    <div class="cards">
+      <div class="backBlue waves-effect hoverable">
+        <span class="mdl-ripple"></span>
+        <div class="img">
+          <img src="./images/client_logo.png" alt="">
+        </div>
+        <div class="title">我们的愿景</div>
+        <div class="text">精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。</div>
+      </div>
+      <div class="backBlack waves-effect hoverable">
+        <span class="mdl-ripple"></span>
+        <div class="img">
+          <img src="./images/client_logo.png" alt="">
+        </div>
+        <div class="title">我们的愿景</div>
+        <div class="text">精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。</div>
+      </div>
+      <div class="backGreen waves-effect hoverable">
+        <span class="mdl-ripple"></span>
+        <div class="img">
+          <img src="./images/client_logo.png" alt="">
+        </div>
+        <div class="title">我们的愿景</div>
+        <div class="text">精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。</div>
+      </div>
     </div>
-    <div class="mdl-tabs__panel" id="targaryens-panel">
-      <ul>
-        <li>Viserys</li>
-        <li>Daenerys</li>
-      </ul>
+    <div class="mdl-grid">
+      <div>Content</div>
+      <div>goes</div>
+      <div>here</div>
     </div>
+  </div>
+  <div class="mdl-tabs__panel" id="lannisters-panel">
+    <ul>
+      <li>Tywin</li>
+      <li>Cersei</li>
+      <li>Jamie</li>
+      <li>Tyrion</li>
+    </ul>
+  </div>
+  <div class="mdl-tabs__panel" id="targaryens-panel">
+    <ul>
+      <li>Viserys</li>
+      <li>Daenerys</li>
+    </ul>
   </div>
   <footer class="mdl-mega-footer">
     <div class="mdl-mega-footer--middle-section">
@@ -169,7 +191,9 @@
   </main>
 </div>
 
-<script src="./lib/mdl/material.min.js"></script>
+<script src="./lib/jquery-2.1.1.min.js"></script>
+<!--<script src="./lib/mdl/material.min.js"></script>-->
+<script src="./lib/materialize/js/materialize.min.js"></script>
 <!-- build:js scripts/main.min.js -->
 <script src="scripts/main.js"></script>
 <!-- endbuild -->

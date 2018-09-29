@@ -74,3 +74,9 @@
 
   // Your custom JavaScript goes here
 })();
+(function($) {
+  $(function() {
+    M.AutoInit();
+    // $('.tabs').tabs();
+  });
+})(jQuery);

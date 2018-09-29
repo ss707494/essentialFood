@@ -23,16 +23,12 @@ will be correctly compiled during `gulp serve` and `gulp`
 $col-green: #86A447;
 $col-blue: #199AE2;
 $col-black: #161D22;
+$col-trans: rgba(0,0,0,0);
 
 @mixin center() {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-@mixin rippleContent() {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
 }
 @mixin boxShadow() {
   box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
@@ -48,15 +44,29 @@ html, body {
   .mdl-layout {
     background-image: url("../images/headtoppc.png");
     background-position: 0 0px;
-    background-size: 100vw 32vw;
+    background-size: 100vw 30vw;
     background-repeat: no-repeat;
     background-color: rgba(0,0,0,0.42);
+    background-attachment: fixed;
   }
   .header-nav {
-    height: 5vw;
+    display: flex;
+    height: 4.5vw;
     border-bottom: 1px solid rgba(151,151,151,0.5);
     box-sizing: border-box;
     align-items: center;
+    .headNav .tabs {
+      background: $col-trans;
+      .tab a {
+        color: #fff;
+        &.active {
+          background: $col-trans;
+        }
+      }
+      .indicator {
+        background: #fff;
+      }
+    }
     .mdl-tabs__tab {
       color: #fff;
       height: 3.5vw;
@@ -86,7 +96,7 @@ html, body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    height: 27vw;
+    height: 25.5vw;
     justify-content: space-between;
     >div {
       text-align: center;
@@ -111,6 +121,7 @@ html, body {
         width: 100px;
         height: 36px;
         color: #fbfbff;
+        box-shadow: none;
       }
     }
     .startBtn {
@@ -118,7 +129,8 @@ html, body {
       margin-right: 40px;
     }
     .aboutBtn {
-      background: $col-green;
+      background: $col-trans;
+      border: 1px solid rgba(255,255,255,0.5);
     }
     .iconlist {
       flex: 1;
@@ -129,14 +141,10 @@ html, body {
   }
   .cards {
     display: flex;
-    height: 20vw;
+    height: 18vw;
     >div {
       color: #fbfbff;
       flex: 1;
-      @include rippleContent();
-      &:hover {
-        @include boxShadow();
-      }
     }
     .backBlue {
       background: $col-blue;
@@ -151,7 +159,7 @@ html, body {
       margin-top: 3vw;
       text-align: center;
       img {
-        height: 44px;
+        height: 3vw;
       }
     }
     .title {
