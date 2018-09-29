@@ -1,0 +1,117 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+Note: any .css or .scss files included in the 'styles' directory
+will be correctly compiled during `gulp serve` and `gulp`
+ */
+@import "./icon";
+
+$col-green: #86A447;
+$col-blue: #199AE2;
+$col-black: #161D22;
+
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin rippleContent() {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.mdl-demo {
+  .header-nav {
+    background: #1E1E1E;
+    padding: 12px 0;
+    border-bottom: 0;
+    .mdl-tabs__tab {
+      color: #fff;
+    }
+    .mdl-tabs__tab.is-active {
+      color: #fff;
+    }
+    .mdl-tabs__tab.is-active:after {
+      background: #fff;
+    }
+    .header-icon {
+      flex: 4;
+    }
+    .space {
+      flex: 1;
+    }
+  }
+  .topbox {
+    background: #090909;
+    color: #fff;
+    overflow: hidden;
+    >div {
+      text-align: center;
+    }
+    h1 {
+      margin-top: 50px;
+    }
+    h1,h5 {
+      text-align: center;
+    }
+    .btnBox {
+      margin: 40px 0 100px;
+    }
+    .startBtn {
+      width: 130px;
+      background: $col-green;
+      color: #fbfbff;
+      margin-right: 40px;
+    }
+    .aboutBtn {
+      width: 130px;
+      background: $col-green;
+      color: #fbfbff;
+    }
+    .iconlist {
+      a {
+        color: #fbfbff;
+      }
+    }
+  }
+  .cards {
+    display: flex;
+    height: 200px;
+    >div {
+      color: #fbfbff;
+      flex: 1;
+      @include rippleContent();
+    }
+    .backBlue {
+      background: $col-blue;
+    }
+    .backBlack {
+      background: $col-black;
+    }
+    .backGreen {
+      background: $col-green;
+    }
+
+  }
+}
