@@ -24,6 +24,7 @@ $col-green: #86A447;
 $col-blue: #199AE2;
 $col-black: #161D22;
 $col-trans: rgba(0,0,0,0);
+$col-grey: #F5F5F5;
 
 @mixin center() {
   display: flex;
@@ -178,11 +179,39 @@ html, body {
       flex: 1;
       font-size: 45px;
       color: #171E23;
-      text-indent: 280px;
+      text-indent: 14vw;
     }
     .content {
+      padding: 4vw 0;
       flex: 2;
-
+      > div {
+        margin-bottom: 2vw;
+      }
+    }
+  }
+  .ourServer {
+    background: $col-grey;
+    overflow: hidden;
+    .title {
+      font-size: 45px;
+      text-align: center;
+      margin: 3vw 0;
+    }
+    .serverCards {
+      margin: 0 15vw;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .card {
+        width: 33vw;
+        margin-bottom: 2.5vw;
+        .card-title {
+          font-weight: bold;
+        }
+        .btn-flat {
+          display: inline-flex;
+        }
+      }
     }
   }
 }
