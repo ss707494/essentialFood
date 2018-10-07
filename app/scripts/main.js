@@ -81,17 +81,13 @@
       var target = document.getElementById(hash.slice(1));
       if (!target) return;
       $('.headNav a').removeClass('active');
-      $('.headNav a[href='+hash+']').addClass('active');
+      $('.headNav a[data-href='+hash+']').addClass('active');
       var targetOffset = $(target).offset().top - window.innerWidth/100*4.5;
       $('html,body').animate({scrollTop: targetOffset}, 400);
     }
 
-    $('a[href^=#][href!=#]').click(function () {
-      handler(this.hash)
+    $('a[data-href^=#][data-href!=#]').click(function () {
+      handler($(this).attr('data-href'))
     });
-
-    if (location.hash) {
-      handler(location.hash)
-    }
   });
 })(jQuery);
