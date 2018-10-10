@@ -26,6 +26,12 @@ $col-black: #161D22;
 $col-trans: rgba(0,0,0,0);
 $col-grey: #F5F5F5;
 
+@mixin media() {
+  @media (min-width: 320px) and (max-width: 480px) {
+    @content;
+  }
+}
+
 @mixin center() {
   display: flex;
   align-items: center;
@@ -61,6 +67,10 @@ html, body {
     background-repeat: no-repeat;
     background-color: rgba(0,0,0,0.42);
     background-attachment: fixed;
+    @include media() {
+      background-image: url("../images/headtop.png");
+      background-size: 100vw (4500vw)/25;
+    }
   }
   .header-nav {
     display: flex;
@@ -71,7 +81,25 @@ html, body {
     position: fixed;
     width: 100vw;
     background: #050505;
+    .navBtn {
+      display: none;
+    }
+    @include media() {
+      height: 14vw;
+      border-bottom: 0;
+      background: transparent;
+      .space {
+        display: none;
+      }
+      .navBtn {
+        display: block;
+        margin-right: 1.5vw;
+      }
+    }
     .headNav .tabs {
+      @include media() {
+        display: none;
+      }
       z-index: 99;
       background: $col-trans;
       .tab a {
@@ -104,6 +132,10 @@ html, body {
       img {
         height: 32px;
         margin-left: 140px;
+        @include media() {
+          height: 6vw;
+          margin-left: 3vw;
+        }
       }
     }
     .space {
@@ -112,6 +144,9 @@ html, body {
   }
   .contentBox {
     padding-top: 4.5vw;
+    @include media() {
+      padding-top: 14vw;
+    }
   }
   .topbox {
     color: #fff;
@@ -128,6 +163,9 @@ html, body {
       display: flex;
       align-items: flex-end;
       justify-content: center;
+      span {
+        padding: 0 1vw;
+      }
     }
     h5 {
       flex: 2;
@@ -157,6 +195,19 @@ html, body {
       flex: 1;
       a {
         color: #fbfbff;
+      }
+    }
+    @include media() {
+      height: 164vw;
+      align-items: center;
+      h1 {
+        flex: 4;
+        width: 70vw;
+        font-size: (70vw)/5;
+        text-align: left;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
       }
     }
   }
@@ -190,6 +241,13 @@ html, body {
     }
     .text {
       margin: 1vw 3vw;
+    }
+    @include media() {
+      height: auto;
+      flex-wrap: wrap;
+      >div {
+        flex: 0 0 100%;
+      }
     }
   }
   .our {

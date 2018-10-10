@@ -76,6 +76,31 @@
 })();
 (function ($) {
   $(function () {
+
+    var browser={
+      versions:function(){
+        var u = navigator.userAgent, app = navigator.appVersion;
+        return {//移动终端浏览器版本信息
+          trident: u.indexOf('Trident') > -1, //IE内核
+          presto: u.indexOf('Presto') > -1, //opera内核
+          webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+          gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+          mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+          ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+          android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+          iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+          iPad: u.indexOf('iPad') > -1, //是否iPad
+          webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+          weixin: u.indexOf('MicroMessenger') > -1, //是否微信
+          qq: u.match(/\sQQ/i) == " qq" //是否QQ
+        };
+      }(),
+      language:(navigator.browserLanguage || navigator.language).toLowerCase()
+    }
+    function isPhone() {
+      return browser.versions.mobile || browser.versions.ios || browser.versions.android || browser.versions.iPhone || browser.versions.iPad
+    }
+    // const isPhone = () => true
     // M.AutoInit();
     var handler = function (hash) {
       var target = document.getElementById(hash.slice(1));
@@ -84,10 +109,27 @@
       $('.headNav a[data-href='+hash+']').addClass('active');
       var targetOffset = $(target).offset().top - window.innerWidth/100*4.5;
       $('html,body').animate({scrollTop: targetOffset}, 400);
+      if (isPhone()) {
+        $('.sidenav').sidenav('close')
+      }
     }
 
     $('a[data-href^=#][data-href!=#]').click(function () {
       handler($(this).attr('data-href'))
     });
+
+    if(isPhone()){
+      // 手机环境
+      $('.sidenav').sidenav({
+        edge: 'right'
+      });
+      $('#slideOut').click(function() {
+        $('.sidenav').sidenav('open')
+      })
+      $('#closesidenav').click(function() {
+        $('.sidenav').sidenav('close')
+      })
+    }
+
   });
 })(jQuery);
