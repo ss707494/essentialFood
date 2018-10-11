@@ -361,6 +361,9 @@ html, body {
   .partnerCompany {
     font-size: 24px;
     @include parentTitle;
+    @include media() {
+      font-size: 20px;
+    }
     .imglist {
       @include list;
       img {
@@ -377,6 +380,9 @@ html, body {
   .feedback {
     font-size: 24px;
     @include parentTitle;
+    @include media() {
+      font-size: 22px;
+    }
     .boxlist {
       @include list;
       .cardOrange {
@@ -452,12 +458,21 @@ html, body {
       }
     }
     @include media() {
+      .title {
+        font-size: 30px;
+      }
       .boxlist {
         .card {
           width: 92vw;
           img {
             width: 92vw;
             height: 92/450*220vw;
+          }
+          .textBox {
+            padding: 8vw;
+            >div {
+              margin-top: 5vw;
+            }
           }
         }
       }
@@ -511,7 +526,7 @@ html, body {
         font-weight: normal;
       }
       .form {
-        margin-top: 2vw;
+        margin-top: 6vw;
         .halfWidth {
           width: 100%;
         }
