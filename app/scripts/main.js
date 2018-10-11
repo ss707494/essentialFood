@@ -101,7 +101,6 @@
       return browser.versions.mobile || browser.versions.ios || browser.versions.android || browser.versions.iPhone || browser.versions.iPad
     }
     // const isPhone = () => true
-    // M.AutoInit();
     var handler = function (hash) {
       var target = document.getElementById(hash.slice(1));
       if (!target) return;
