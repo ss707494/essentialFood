@@ -26,6 +26,10 @@ $col-black: #161D22;
 $col-trans: rgba(0,0,0,0);
 $col-grey: #F5F5F5;
 
+@function p2w($px, $width : 750) {
+  @return ($px / $width) * 100vw;
+}
+
 @mixin media() {
   @media (min-width: 320px) and (max-width: 480px) {
     @content;
@@ -266,7 +270,7 @@ html, body {
     }
   }
   .our {
-    height: 15vw;
+    //height: 15vw;
     display: flex;
     .title {
       flex: 1;
@@ -279,6 +283,7 @@ html, body {
       flex: 2;
       > div {
         margin-bottom: 2vw;
+        margin-right: p2w(10);
       }
     }
     @include media() {
@@ -508,8 +513,8 @@ html, body {
         margin-top: 1.5vw;
         button {
           width: 100%;
-          height: 2.8vw;
-          font-size: 24px;
+          //height: 2.8vw;
+          font-size: p2w(18);
         }
       }
       .input-field {
