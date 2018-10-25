@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 /*
 Note: any .css or .scss files included in the 'styles' directory
 will be correctly compiled during `gulp serve` and `gulp`
@@ -23,7 +22,7 @@ will be correctly compiled during `gulp serve` and `gulp`
 $col-green: #86A447;
 $col-blue: #199AE2;
 $col-black: #161D22;
-$col-trans: rgba(0,0,0,0);
+$col-trans: rgba(0, 0, 0, 0);
 $col-grey: #F5F5F5;
 
 @function p2w($px, $width : 750) {
@@ -41,18 +40,19 @@ $col-grey: #F5F5F5;
   align-items: center;
   justify-content: center;
 }
+
 @mixin boxShadow() {
-  box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
 }
+
 @mixin ellipsis($row: 1) {
   overflow: hidden;
   text-overflow: ellipsis;
   @if $row != 1 {
-    display:-webkit-box;
+    display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: $row;
-  }
-  @else {
+  } @else {
     white-space: nowrap;
   }
 }
@@ -69,7 +69,7 @@ html, body {
     background-position: 0 0px;
     background-size: 100vw 30vw;
     background-repeat: no-repeat;
-    background-color: rgba(0,0,0,0.42);
+    background-color: rgba(0, 0, 0, 0.42);
     background-attachment: fixed;
     @include media() {
       background-image: url("../images/headtop.png");
@@ -79,7 +79,7 @@ html, body {
   .header-nav {
     display: flex;
     height: 4.5vw;
-    border-bottom: 1px solid rgba(151,151,151,0.5);
+    border-bottom: 1px solid rgba(151, 151, 151, 0.5);
     box-sizing: border-box;
     align-items: center;
     position: fixed;
@@ -91,7 +91,7 @@ html, body {
     @include media() {
       height: 14vw;
       border-bottom: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0)) ;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
       .space {
         display: none;
       }
@@ -145,6 +145,14 @@ html, body {
     .space {
       flex: 1;
     }
+    .changLan {
+      position: absolute;
+      right: 2vw;
+      @include media() {
+        right: 10vw;
+        top: 2.1vw;
+      }
+    }
   }
   .contentBox {
     padding-top: 4.5vw;
@@ -158,7 +166,7 @@ html, body {
     flex-direction: column;
     height: 25.5vw;
     justify-content: space-between;
-    >div {
+    > div {
       text-align: center;
     }
     h1 {
@@ -174,7 +182,7 @@ html, body {
     h5 {
       flex: 2;
     }
-    h1,h5 {
+    h1, h5 {
       text-align: center;
     }
     .btnBox {
@@ -193,7 +201,7 @@ html, body {
     }
     .aboutBtn {
       background: $col-trans;
-      border: 1px solid rgba(255,255,255,0.5);
+      border: 1px solid rgba(255, 255, 255, 0.5);
     }
     .iconlist {
       flex: 1;
@@ -221,7 +229,7 @@ html, body {
   .cards {
     display: flex;
     height: 18vw;
-    >div {
+    > div {
       color: #fbfbff;
       flex: 1;
     }
@@ -252,7 +260,7 @@ html, body {
     @include media() {
       height: auto;
       flex-wrap: wrap;
-      >div {
+      > div {
         flex: 0 0 100%;
       }
       .img {
@@ -442,7 +450,7 @@ html, body {
         }
         .textBox {
           padding: 1.2vw;
-          >div {
+          > div {
             margin-top: .8vw;
           }
           .apps {
@@ -475,7 +483,7 @@ html, body {
           }
           .textBox {
             padding: 8vw;
-            >div {
+            > div {
               margin-top: 5vw;
             }
           }
@@ -497,7 +505,7 @@ html, body {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      >div {
+      > div {
         margin-top: 2.4vw;
         width: 100%;
       }
@@ -554,12 +562,12 @@ html, body {
     .content {
       display: flex;
       justify-content: space-between;
-      >div {
+      > div {
         width: 20%;
       }
       @include media() {
         flex-wrap: wrap;
-        >div {
+        > div {
           flex: 0 0 100%;
           margin-bottom: 2vw;
         }
@@ -568,6 +576,7 @@ html, body {
     }
   }
 }
+
 .detail {
   @mixin marLeft {
     margin-left: 14vw;
@@ -618,7 +627,7 @@ html, body {
       @include media() {
         .content {
           margin: 0;
-          >div {
+          > div {
             margin-bottom: 4vw;
           }
         }
