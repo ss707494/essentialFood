@@ -147,6 +147,7 @@ html, body {
     }
     .changLan {
       position: absolute;
+      top: 1.3vw;
       right: 2vw;
       @include media() {
         right: 16vw;
