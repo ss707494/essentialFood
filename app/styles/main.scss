@@ -99,6 +99,10 @@ html, body {
         display: block;
         margin-right: 1.5vw;
       }
+      .headNav {
+        flex: 1;
+        text-align: right;
+      }
     }
     .headNav .tabs {
       @include media() {
@@ -133,6 +137,9 @@ html, body {
       height: 100%;
       display: flex;
       align-items: center;
+      @include media() {
+        flex: 0 1 54vw;
+      }
       img {
         height: 32px;
         margin-left: 140px;
@@ -150,8 +157,9 @@ html, body {
       top: 1.3vw;
       right: 2vw;
       @include media() {
-        right: 16vw;
+        left: 14vw;
         top: 2.1vw;
+        width: 50vw;
       }
     }
   }
