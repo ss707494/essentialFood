@@ -136,9 +136,9 @@
     function changeLan(lan) {
       // 切换语言
       if (lanData) {
-        Object.keys(lanData).forEach(e => {
-          $('#' + e).text(lanData[e][lan ? 'en' : 'ch'])
-        })
+        Object.keys(window.lanData).forEach(function (e) {
+          $('#' + e).text(window.lanData[e][lan ? 'en' : 'ch']);
+        });
       }
     }
     $('#changeLan').click(function (e) {

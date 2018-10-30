@@ -1,5 +1,5 @@
 
-$(function () {
+$(function() {
   const lanData = {
     navTitle1: {
       en: 'FEATURES',
@@ -422,7 +422,7 @@ $(function () {
       en: 'HTML Tags and Formatting',
       ch: 'HTML Tags and Formatting',
     },
-  }
-  window.lanData = lanData
-})
+  };
+  window.lanData = lanData;
+});
 
