@@ -154,12 +154,18 @@ html, body {
     }
     .changLan {
       position: absolute;
-      top: 1.3vw;
+      top: 1.6vw;
       right: 2vw;
       @include media() {
         left: 14vw;
-        top: 2.1vw;
+        top: 4.1vw;
         width: 50vw;
+      }
+      .switch label .lever {
+        background-color: rgba(220, 213, 213, 0.57);
+      }
+      .switch label input[type=checkbox]:checked+.lever {
+        background-color: #84c7c1;
       }
     }
   }
