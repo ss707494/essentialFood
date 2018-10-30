@@ -133,5 +133,16 @@
       })
     }
 
+    function changeLan(lan) {
+      // 切换语言
+      if (lanData) {
+        Object.keys(lanData).forEach(e => {
+          $('#' + e).text(lanData[e][lan ? 'en' : 'ch'])
+        })
+      }
+    }
+    $('#changeLan').click(function (e) {
+      changeLan(this.checked)
+    })
   });
 })(jQuery);

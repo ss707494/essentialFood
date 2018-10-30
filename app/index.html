@@ -60,13 +60,13 @@
     </div>
     <div class="headNav">
       <ul class="tabs">
-        <li class="tab"><a class="active waves-effect waves-light" data-href="#test1">特点</a></li>
-        <li class="tab"><a class="waves-effect waves-light" data-href="#test2">关于</a></li>
-        <li class="tab"><a class="waves-effect waves-light" data-href="#test3">产品</a></li>
-        <li class="tab"><a class="waves-effect waves-light" data-href="#test4">服务</a></li>
-        <li class="tab"><a class="waves-effect waves-light" data-href="#test5">客户</a></li>
-        <li class="tab"><a class="waves-effect waves-light" data-href="#test6">新闻</a></li>
-        <li class="tab"><a class="waves-effect waves-light" data-href="#test7">联系我们</a></li>
+        <li class="tab"><a id="navTitle1" class="active waves-effect waves-light" data-href="#test1">特点</a></li>
+        <li class="tab"><a id="navTitle2" class="waves-effect waves-light" data-href="#test2">关于</a></li>
+        <li class="tab"><a id="navTitle3" class="waves-effect waves-light" data-href="#test3">产品</a></li>
+        <li class="tab"><a id="navTitle4" class="waves-effect waves-light" data-href="#test4">服务</a></li>
+        <li class="tab"><a id="navTitle5" class="waves-effect waves-light" data-href="#test5">客户</a></li>
+        <li class="tab"><a id="navTitle6" class="waves-effect waves-light" data-href="#test6">新闻</a></li>
+        <li class="tab"><a id="navTitle7" class="waves-effect waves-light" data-href="#test7">联系我们</a></li>
       </ul>
       <div id="slideOut" class="navBtn">
         <i class="material-icons white-text">menu</i>
@@ -76,10 +76,10 @@
     <div class="changLan">
       <div class="switch">
         <label>
-          <span>中文</span>
-          <input type="checkbox">
+          <span id="chineseLan">中文</span>
+          <input id="changeLan" type="checkbox">
           <span class="lever"></span>
-          <span>English</span>
+          <span id="englishLan">English</span>
         </label>
       </div>
       <!--<a class="btn-flat disabled">中文</a>-->
@@ -88,13 +88,13 @@
   </div>
   <div class="contentBox">
     <div class="topbox" id="test1">
-      <h1><span>你的精华</span><span>你的事业</span></h1>
-      <h5>开启人生新选择</h5>
+      <h1><span id="yourEssence">你的精华</span><span id="yourCareer">你的事业</span></h1>
+      <h5 id="ofYourLife">开启人生新选择</h5>
       <div class="btnBox">
-        <button class="startBtn waves-effect btn">
+        <button id="getStarted" class="startBtn waves-effect btn">
           开始
         </button>
-        <button class="aboutBtn waves-effect btn">
+        <button id="contactNow" class="aboutBtn waves-effect btn">
           联系我们
         </button>
       </div>
@@ -110,84 +110,84 @@
         <div class="img">
           <img src="./images/client_logo.png" alt="">
         </div>
-        <div class="title">我们的愿景</div>
-        <div class="text">精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。</div>
+        <div id="responsiveDesign" class="title">我们的愿景</div>
+        <div id="responsiveDesignText" class="text">精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。</div>
       </div>
       <div class="backBlack waves-effect hoverable">
         <span class="mdl-ripple"></span>
         <div class="img">
           <img src="./images/client_logo.png" alt="">
         </div>
-        <div class="title">我们的愿景</div>
-        <div class="text">精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。</div>
+        <div id="responsiveDesign1" class="title">我们的愿景</div>
+        <div id="responsiveDesignText1" class="text">精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。</div>
       </div>
       <div class="backGreen waves-effect hoverable">
         <span class="mdl-ripple"></span>
         <div class="img">
           <img src="./images/client_logo.png" alt="">
         </div>
-        <div class="title">我们的愿景</div>
-        <div class="text">精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。</div>
+        <div id="responsiveDesign2" class="title">我们的愿景</div>
+        <div id="responsiveDesignText2" class="text">精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。</div>
       </div>
     </div>
     <div class="our white" id="test2">
-      <div class="title valign-wrapper">关于我们</div>
+      <div id="aboutUs" class="title valign-wrapper">关于我们</div>
       <div class="content">
-        <div>1973年，我们在纽约唐人街的东百老汇大街(East Broadway)上创建了一家只有10名员工和一条生产线的公司。四十年后，我们公司的产品遍布美国大陆，我们的业务已经扩展到纽约、德克萨斯和田纳西的工厂。
+        <div id="aboutUsContent1">1973年，我们在纽约唐人街的东百老汇大街(East Broadway)上创建了一家只有10名员工和一条生产线的公司。四十年后，我们公司的产品遍布美国大陆，我们的业务已经扩展到纽约、德克萨斯和田纳西的工厂。
         </div>
-        <div>精华食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。客户满意是我们的第一目标!质量是无法替代的。在Essence Foods，重要的不仅仅是公司的质量，更重要的是我们员工的质量。</div>
+        <div id="aboutUsContent2">精华食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。客户满意是我们的第一目标!质量是无法替代的。在Essence Foods，重要的不仅仅是公司的质量，更重要的是我们员工的质量。</div>
       </div>
     </div>
     <div class="product" id="test3">
       <img src="./images/headtoppc.png" alt="">
     </div>
     <div class="ourServer" id="test4">
-      <div class="title">我们的服务</div>
+      <div id="ourServices" class="title">我们的服务</div>
       <div class="serverCards">
         <div class="card">
           <div class="card-content">
-            <span class="card-title">响应网页设计</span>
-            <p>你想要设计一个新的网站吗?我们为您的企业提供全方位的服务——从新兴企业到大型跨国公司。</p>
+            <span id="ourServicesTitle1" class="card-title">响应网页设计</span>
+            <p id="ourServicesText1">你想要设计一个新的网站吗?我们为您的企业提供全方位的服务——从新兴企业到大型跨国公司。</p>
           </div>
           <div class="card-action">
             <a class="waves-effect black-text waves-orange btn-flat">
-              查看更多
+              <span id="moreDetail">查看更多</span>
               <i class="material-icons">trending_flat</i>
             </a>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <span class="card-title">搜索引擎优化</span>
-            <p>当你想在互联网上找到某样东西时，你首先会去哪里?如果你和大多数用户一样，你就会使用搜索引擎。</p>
+            <span id="ourServicesTitle2" class="card-title">搜索引擎优化</span>
+            <p id="ourServicesText2">当你想在互联网上找到某样东西时，你首先会去哪里?如果你和大多数用户一样，你就会使用搜索引擎。</p>
           </div>
           <div class="card-action">
             <a class="waves-effect black-text waves-orange btn-flat">
-              查看更多
+              <span id="moreDetail2">查看更多</span>
               <i class="material-icons">trending_flat</i>
             </a>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <span class="card-title">社交媒体营销</span>
-            <p>通过与现有客户和潜在客户的实时在线联系，公司可以传达关于其品牌、产品和服务的信息。</p>
+            <span id="ourServicesTitle3" class="card-title">社交媒体营销</span>
+            <p id="ourServicesText3">通过与现有客户和潜在客户的实时在线联系，公司可以传达关于其品牌、产品和服务的信息。</p>
           </div>
           <div class="card-action">
             <a class="waves-effect black-text waves-orange btn-flat">
-              查看更多
+              <span id="moreDetail3">查看更多</span>
               <i class="material-icons">trending_flat</i>
             </a>
           </div>
         </div>
         <div class="card">
           <div class="card-content">
-            <span class="card-title">移动应用开发</span>
-            <p>iPhone, iPad, Android应用程序-我们为客户提供额外的资源来推动他们的在线活动，目标新受众和增加市场渗透率。</p>
+            <span id="ourServicesTitle4" class="card-title">移动应用开发</span>
+            <p id="ourServicesText4">iPhone, iPad, Android应用程序-我们为客户提供额外的资源来推动他们的在线活动，目标新受众和增加市场渗透率。</p>
           </div>
           <div class="card-action">
             <a class="waves-effect black-text waves-orange btn-flat">
-              查看更多
+              <span id="moreDetail4">查看更多</span>
               <i class="material-icons">trending_flat</i>
             </a>
           </div>
@@ -195,7 +195,7 @@
       </div>
     </div>
     <div id="test5" class="partnerCompany white center-align">
-      <b class="title">合作公司</b>
+      <b id="hadBeenFeatured" class="title">合作公司</b>
       <div class="imglist">
         <img src="./images/companylogo.png" alt="">
         <img src="./images/companylogo.png" alt="">
@@ -376,6 +376,7 @@
 <!--<script src="./lib/mdl/material.min.js"></script>-->
 <script src="./lib/materialize/js/materialize.min.js"></script>
 <!-- build:js scripts/main.min.js -->
+<script src="scripts/lan.js"></script>
 <script src="scripts/main.js"></script>
 <!-- endbuild -->
 
