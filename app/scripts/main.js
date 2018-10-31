@@ -128,18 +128,5 @@
         $('.sidenav').sidenav('close');
       });
     }
-
-    function changeLan(lan) {
-      // 切换语言
-      if (window.lanData) {
-        Object.keys(window.lanData).forEach(function (e) {
-          $('#' + e).text(window.lanData[e][lan ? 'en' : 'ch']);
-        });
-      }
-    }
-    $('#changeLan').click(function() {
-      changeLan(this.checked);
-      $('#testttttt').text('ceshi');
-    });
   });
 })(jQuery);

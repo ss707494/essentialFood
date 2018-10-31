@@ -423,6 +423,23 @@ $(function() {
       ch: 'HTML Tags and Formatting',
     },
   };
-  window.lanData = lanData;
+
+  function changeLan(lan) {
+    if (lan) {
+      $('.mdl-demo').addClass('english_layout')
+    } else {
+      $('.mdl-demo').removeClass('english_layout')
+    }
+    // 切换语言
+    if (lanData) {
+      Object.keys(lanData).forEach(function (e) {
+        $('#' + e).text(lanData[e][lan ? 'en' : 'ch']);
+      });
+    }
+  }
+  $('#changeLan').click(function() {
+    changeLan(this.checked);
+  });
+  // window.lanData = lanData;
 });
 

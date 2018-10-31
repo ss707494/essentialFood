@@ -164,7 +164,7 @@ html, body {
       .switch label .lever {
         background-color: rgba(220, 213, 213, 0.57);
       }
-      .switch label input[type=checkbox]:checked+.lever {
+      .switch label input[type=checkbox]:checked + .lever {
         background-color: #84c7c1;
       }
     }
@@ -657,5 +657,20 @@ html, body {
         }
       }
     }
+  }
+}
+
+.english_layout {
+  .topbox {
+    h1 {
+      font-size: 50px;
+    }
+  }
+  .header-nav .headNav .tabs .tab a {
+    font-size: 12px;
+    padding: 0 15px;
+  }
+  .our .title {
+    font-size: 30px;
   }
 }
