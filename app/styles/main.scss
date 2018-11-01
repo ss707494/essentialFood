@@ -110,11 +110,17 @@ html, body {
       }
       z-index: 99;
       background: $col-trans;
-      .tab a {
+      .tab span {
         color: #fff;
+        padding: 0 24px;
+        font-size: 14px;
+        height: 100%;
+        display: block;
+        -webkit-transition: color .28s ease, background-color .28s ease;
+        transition: color .28s ease, background-color .28s ease;
         &.active {
           background: $col-trans;
-          border-bottom: 1px solid;
+          border-bottom: 1px solid #fff;
         }
       }
       .indicator {
@@ -588,6 +594,16 @@ html, body {
         }
       }
 
+    }
+  }
+  .sidenav {
+    .tab span {
+      padding: 0 24px;
+      font-size: 14px;
+      height: 100%;
+      display: block;
+      -webkit-transition: color .28s ease, background-color .28s ease;
+      transition: color .28s ease, background-color .28s ease;
     }
   }
 }

@@ -103,8 +103,8 @@
     var handler = function(hash) {
       var target = document.getElementById(hash.slice(1));
       if (!target) return;
-      $('.headNav a').removeClass('active');
-      $('.headNav a[data-href=' + hash + ']').addClass('active');
+      $('.headNav span').removeClass('active');
+      $('.headNav span[data-href=' + hash + ']').addClass('active');
       var targetOffset = $(target).offset().top - window.innerWidth / 100 * 4.5;
       $('html,body').animate({scrollTop: targetOffset}, 400);
       if (isPhone()) {
@@ -112,7 +112,7 @@
       }
     };
 
-    $('a[data-href^=#][data-href!=#]').click(function() {
+    $('span[data-href^=#][data-href!=#]').click(function() {
       handler($(this).attr('data-href'));
     });
 
