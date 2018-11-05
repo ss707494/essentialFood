@@ -65,9 +65,17 @@ $(function() {
       en: 'Essence Foods manufactures the highest quality food products while maintaining strict quality standards for our valued customers.',
       ch: '精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。',
     },
+    responsiveDesign1: {
+      en: 'Responsive Design',
+      ch: '我们的愿景',
+    },
     responsiveDesignText1: {
       en: 'Essence Foods manufactures the highest quality food products while maintaining strict quality standards for our valued customers.',
       ch: '精粹食品制造最高质量的食品产品，同时保持严格的质量标准，为我们的宝贵客户。',
+    },
+    responsiveDesign2: {
+      en: 'Responsive Design',
+      ch: '我们的愿景',
     },
     responsiveDesignText2: {
       en: 'Essence Foods manufactures the highest quality food products while maintaining strict quality standards for our valued customers.',
